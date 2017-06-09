@@ -25,8 +25,8 @@ TARGETS_THAT_USE_FLAG_MSM8226 := msm8226 msm8916 msm8909
 TARGETS_THAT_NEED_SW_VENC_MPEG4 := msm8909 msm8937
 TARGETS_THAT_NEED_SW_VENC_HEVC := msm8992
 TARGETS_THAT_SUPPORT_UBWC := msm8996 msm8998 apq8098_latv
-TARGETS_THAT_SUPPORT_VQZIP := msm8996 msm8998 apq8098_latv
-TARGETS_THAT_SUPPORT_PQ := msm8996 msm8998 apq8098_latv msm8953 sdm660
+#TARGETS_THAT_SUPPORT_VQZIP := msm8996 msm8998 apq8098_latv
+#TARGETS_THAT_SUPPORT_PQ := msm8996 msm8998 apq8098_latv msm8953 sdm660
 TARGETS_THAT_USE_NV21 := sdm660 msm8953
 TARGETS_THAT_SUPPORT_MAX_H264_LEVEL_4 := msm8937
 TARGETS_THAT_SUPPORT_MAX_H264_LEVEL_51 := msm8953 sdm660
@@ -89,9 +89,9 @@ endif
 
 # Common Includes
 libmm-venc-inc      := $(LOCAL_PATH)/inc
-libmm-venc-inc      += $(TOP)/hardware/qcom/media/mm-video-v4l2/vidc/common/inc
-libmm-venc-inc      += hardware/qcom/media/mm-core/inc
-libmm-venc-inc      += hardware/qcom/media/libstagefrighthw
+libmm-venc-inc      += $(TOP)/hardware/qcom/media-caf-msm8998/mm-video-v4l2/vidc/common/inc
+libmm-venc-inc      += hardware/qcom/media-caf-msm8998/mm-core/inc
+libmm-venc-inc      += hardware/qcom/media-caf-msm8998/libstagefrighthw
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/qcom/display
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/adreno
 libmm-venc-inc      += frameworks/native/include/media/hardware
@@ -99,8 +99,8 @@ libmm-venc-inc      += frameworks/native/libs/nativewindow/include/
 libmm-venc-inc      += frameworks/native/libs/arect/include/
 libmm-venc-inc      += frameworks/native/libs/nativebase/include
 libmm-venc-inc      += frameworks/native/include/media/openmax
-libmm-venc-inc      += hardware/qcom/media/libc2dcolorconvert
-libmm-venc-inc      += hardware/qcom/media/hypv-intercept
+libmm-venc-inc      += hardware/qcom/media-caf-msm8998/libc2dcolorconvert
+libmm-venc-inc      += hardware/qcom/media-caf-msm8998/hypv-intercept
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/libvqzip
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_SUPPORT_PQ)),true)
